@@ -1,0 +1,25 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/moment/moment.js"></script>
+<script src="./node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">momentjsを利用して、以下をコンソールに出力する。</li>
+            <li class="list-group-item">テキストボックスに入力された値をmomentjsのオブジェクトに変換した値（以下、入力値とする）</li>
+            <li class="list-group-item">入力値をYYYY年MM月DD日として出力</li>
+            <li class="list-group-item">今日より入力値が後の日付か（true/false）を出力</li>
+            <li class="list-group-item">入力値の年、月、日、曜日をそれぞれ出力</li>
+            <li class="list-group-item">入力値の週の月曜日の24時00分00.000秒のタイムスタンプを出力</li>
+            <li class="list-group-item">入力値の1年前の日付を出力</li>
+        </ul>
+
+        <div id="targetArea">
+            <input type="text" id="date" readonly/>
+        </div>
+    </div>
+</div>

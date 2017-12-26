@@ -1,0 +1,37 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">下記のHTMLから、テキストボックスの値を所定の箇所に所定の形式で追加する。</li>
+            <li class="list-group-item">idがtargetの要素から操作すること。</li>
+            <li class="list-group-item list-group-item-warning">DOM要素の操作によって、HTMLペインの値は変更されないため、作成したコードによるDOM要素の変化は開発者ツールで確認すること。</li>
+        </ul>
+
+        <!-- 対象DOM要素 -->
+        <div id="targetArea">
+            <label>
+                基準の前：<input type="text" name="after" value="下" />
+            </label>
+            <br>
+            <label>
+                基準の後：<input type="text" name="before" value="上" />
+            </label>
+            <ul id="target">
+                <!-- ここに<li>基準の前の入力値</li>を追加する -->
+                <li>基準となる要素</li>
+                <!-- ここに<li>基準の後の入力値</li>を追加する -->
+            </ul>
+        </div>
+        <!-- 対象DOM要素 ここまで -->
+
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info">append()は指定要素内の一番後ろに、prepend()は指定要素内の一番前に要素を追加する。</li>
+        </ul>
+
+        <button id="check">作成したスクリプトを実行</button>
+    </div>
+</div>

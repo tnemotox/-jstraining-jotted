@@ -1,0 +1,26 @@
+#targetArea {
+    margin-bottom:10px;
+    margin-top:10px;
+    padding:5px;
+}
+
+#answer {
+    margin-bottom: 15px;
+}
+
+.ninety-nine div {
+    border: solid 1px #999;
+    text-align:center;
+}
+
+.alert {
+    padding: 6px 12px !important;
+    margin-bottom: 0px !important;
+    text-align: center;
+}
+
+.header {
+    background-color: #ccc;
+}
+
+/* ここから上は、編集しないでください。 */

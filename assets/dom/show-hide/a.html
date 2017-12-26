@@ -1,0 +1,32 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">完了を表示、がチェックされているとき、完了したチェックボックスを非表示にする。</li>
+            <li class="list-group-item">完了を表示、がチェックをはずしたときは、再度表示する。</li>
+            <li class="list-group-item">ヒント：Todoのチェックボックスがクリックされたときは、#showに対してchangeイベントを発火すると効率よく実装ができる。</li>
+        </ul>
+
+        <!-- 対象DOM -->
+        <div id="targetArea">
+            <input type="text" id="todo" />
+            <button id="add">追加</button><button id="removeAll">全削除</button>　完了を表示　<input type="checkbox" id="show" checked/>
+            <strong>　　完了/合計：<span id="completed">0</span>/<span id="all">7</span></strong>
+            <hr>
+            <ul id="todos">
+                <li><button class="remove">削除</button>　<label><input type="checkbox" />　飲み屋を探す</label></li>
+                <li><button class="remove">削除</button>　<label><input type="checkbox" />　飲み屋を仮押さえする</label></li>
+                <li><button class="remove">削除</button>　<label><input type="checkbox" />　参加人数を確定する</label></li>
+                <li><button class="remove">削除</button>　<label><input type="checkbox" />　飲み屋を予約する</label></li>
+                <li><button class="remove">削除</button>　<label><input type="checkbox" />　当日の段取りを考える</label></li>
+                <li><button class="remove">削除</button>　<label><input type="checkbox" />　主賓に挨拶のお願いをする</label></li>
+                <li><button class="remove">削除</button>　<label><input type="checkbox" />　会費を集める</label></li>
+            </ul>
+        </div>
+        <!-- 対象DOM 終わり -->
+    </div>
+</div>

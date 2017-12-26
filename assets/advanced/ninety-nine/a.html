@@ -1,0 +1,212 @@
+<!-- HTMLは編集せずに解いてください。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">HTMLは編集せず、JavaScriptのみを編集して下記を実現してください。</li>
+            <li class="list-group-item">CSSは編集してかまいません。</li>
+            <li class="list-group-item">?のマスをクリックしたとき、?のマスの背景色を、任意の色に変更する。<br/>色が変更されているマスを、選択状態のマスと定義する。</li>
+            <li class="list-group-item">選択状態のマスは、必ず1つとする。<br/>別のマスがクリックされたときには選択状態のマスを変更する。</li>
+            <li class="list-group-item">テキストボックスに選択したマスの計算結果を入力し、"解答する"をクリックする動作を想定する。</li>
+            <li class="list-group-item">正解したら、"正解数"のバッジの数値を1増やし、#answerResultに"正解！"と緑色で表示する。</li>
+            <li class="list-group-item">あわせて、選択状態のマスを解答済みを示す別の色に変更し、選択状態にできないようにする。<br/>あわせて、?を正解の数字に変更する。</li>
+            <li class="list-group-item">間違えたら、#answerResultに"はずれ！"と赤色で表示する。</li>
+        </ul>
+    </div>
+</div>
+
+<!-- 以下、対象のDOM -->
+<div id="targetArea">
+    <div class="container">
+        <div class="row" id="answer">
+            <div class="col-xs-3">
+                <div class="btn btn-primary">
+                    正解数　<span id="answerNum" class="badge">0</span>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="input-group">
+                    <input type="text" id="answerMulti" class="form-control" aria-label="数字を入力してください。">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="answerBtn">解答する</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="alert alert-danger" id="answerResult">頑張ろう！</div>
+            </div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">＼</div>
+            <div class="col-xs-1 header">0</div>
+            <div class="col-xs-1 header">1</div>
+            <div class="col-xs-1 header">2</div>
+            <div class="col-xs-1 header">3</div>
+            <div class="col-xs-1 header">4</div>
+            <div class="col-xs-1 header">5</div>
+            <div class="col-xs-1 header">6</div>
+            <div class="col-xs-1 header">7</div>
+            <div class="col-xs-1 header">8</div>
+            <div class="col-xs-1 header">9</div>
+            <div class="col-xs-1 header">／</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">0</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1 header">0</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">1</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1 header">1</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">2</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1 header">2</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">3</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1 header">3</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">4</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1 header">4</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">5</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1 header">5</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">6</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1 header">6</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">7</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1 header">7</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">8</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1 header">8</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">9</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1 header">9</div>
+        </div>
+        <div class="row ninety-nine">
+            <div class="col-xs-1 header">／</div>
+            <div class="col-xs-1 header">0</div>
+            <div class="col-xs-1 header">1</div>
+            <div class="col-xs-1 header">2</div>
+            <div class="col-xs-1 header">3</div>
+            <div class="col-xs-1 header">4</div>
+            <div class="col-xs-1 header">5</div>
+            <div class="col-xs-1 header">6</div>
+            <div class="col-xs-1 header">7</div>
+            <div class="col-xs-1 header">8</div>
+            <div class="col-xs-1 header">9</div>
+            <div class="col-xs-1 header">＼</div>
+        </div>
+    </div>
+</div>
+<!-- 対象のDOM 終わり -->

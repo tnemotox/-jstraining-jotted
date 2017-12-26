@@ -1,0 +1,40 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">対象DOM要素から、idがtargetを基準として祖父（波平）を取得する。</li>
+            <li class="list-group-item">jQueryを用いてCSSを操作し、波平を太字、文字色を青に変更する。</li>
+        </ul>
+
+        <!-- 対象のDOM要素 -->
+        <div id="targetArea">
+            <ul>
+                <li>母：<span class="name">フネ</span></li>
+                <li>父：<span class="name">波平</span>
+                    <ul>
+                        <li>姉：<span class="name">サザエ</span></li>
+                        <li>義兄：<span class="name">マスオ</span>
+                            <ul>
+                                <li id="target">甥：<span class="name">タラオ</span></li>
+                            </ul>
+                        </li>
+                        <li>僕：<span class="name">カツオ</span></li>
+                        <li>妹：<span class="name">ワカメ</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- 対象のDOM要素 ここまで -->
+
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info">遠い親をたどるときには、$.closest()を使用することで、構造変化に強くなる。</li>
+            <li class="list-group-item list-group-item-info">複数の親を取得する関数として、$.parents()も存在するが、$.closest()のほうが性能がよい。</li>
+        </ul>
+
+        <button id="check">作成したスクリプトを実行</button>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/jquery-mockjax/dist/jquery.mockjax.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">ドロップダウンでユーザを選択したとき、該当するユーザのTodoリスト情報をAjaxで取得する。</li>
+            <li class="list-group-item">Ajaxで取得したTodoリスト情報を元に、画面上のTodoリストを書き換える。</li>
+            <li class="list-group-item">AjaxでアクセスするURLは"/get"、HTTPメソッドは"GET"とする。</li>
+            <li class="list-group-item">パラメータとして、ドロップダウンで選択したユーザのIDを受け渡すこと。<br/>パラメータの形式は、{ id: ユーザID }とすること。</li>
+            <li class="list-group-item">Ajaxで返却される結果は、$.mockjaxにて定義済。JavaScriptを参照。</li>
+            <li class="list-group-item">"ユーザを選択"を選択したとき、Todoリスト情報の取得に失敗する。そのとき、モックから返却されるステータスコードとメッセージをダイアログに出力すること。</li>
+        </ul>
+
+        <!-- 対象DOM -->
+        <div id="targetArea">
+            <label>ユーザ：
+                <select id="get">
+                    <option value="0">ユーザを選択</option>
+                    <option value="1">田中</option>
+                    <option value="2">鈴木</option>
+                </select>
+            </label>
+            <input type="text" id="todo" />
+            <button id="add">追加</button><button id="removeAll">全削除</button><br/>　完了を表示　<input type="checkbox" id="show" checked/>
+            <strong>　　完了/合計：<span id="completed">0</span>/<span id="all">0</span></strong>
+            <hr>
+            <ul id="todos">
+            </ul>
+        </div>
+        <!-- 対象DOM 終わり -->
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">対象DOM要素から、idがtarget（カツオ）を基準として"姉"、"妹"、"義兄"の名前（サザエ、ワカメ、マスオ）を取得してコンソールに出力する。</li>
+            <li class="list-group-item">カツオの兄弟/姉妹の人数を取得してコンソールに出力する。兄弟を取得するjQuery関数を使用すること。</li>
+        </ul>
+
+        <!-- 対象のDOM要素 -->
+        <div id="targetArea">
+            <ul>
+                <li>母：<span class="name">フネ</span></li>
+                <li>父：<span class="name">波平</span>
+                    <ul>
+                        <li>義兄：<span class="name">マスオ</span></li>
+                        <li>姉：<span class="name">サザエ</span>
+                            <ul>
+                                <li>甥：<span class="name">タラオ</span></li>
+                            </ul>
+                        </li>
+                        <li id="target">僕：<span class="name">カツオ</span></li>
+                        <li>妹：<span class="name">ワカメ</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- 対象のDOM要素 ここまで -->
+
+        <button id="check">作成したスクリプトを実行</button>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+/* この問題は、CSSを編集する必要はありません。 */
+
+#targetArea {
+    border:solid 1px #000;
+    margin-bottom:10px;
+    padding:5px;
+}
+
+#target {
+    color:red;
+    font-weight:bold;
+}

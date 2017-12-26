@@ -1,0 +1,211 @@
+<!-- HTMLを自由に編集してください。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">Bootstrapのグリッドシステムを利用して、HTMLペインのコメントのような掛け算九九表を作成すること。</li>
+            <li class="list-group-item">tableタグは使用せず、divタグのみを使用する。</li>
+            <li class="list-group-item">ペインの幅が不足しているため、グリッドのクラスはcol-xs-*を使用すること。</li>
+        </ul>
+    </div>
+</div>
+
+<!-- 以下の要素の中に、以下のように掛け算九九表を作成する。 -->
+<!-- (a)は4マス、(b)は8マスとして、任意の文字列を入力すること。
+<!-- 以降、九九のマスは1マスずつとする。
+<!-- 計算結果（"?"の解答）は、ここで埋めなくてもよい。
+
+|   (a)   |     (b)     |
+|-|0|1|2|3|4|5|6|7|8|9|-|
+|0|?|?|?|?|?|?|?|?|?|?|0|
+|1|?|?|?|?|?|?|?|?|?|?|1|
+|2|?|?|?|?|?|?|?|?|?|?|2|
+|3|?|?|?|?|?|?|?|?|?|?|3|
+|4|?|?|?|?|?|?|?|?|?|?|4|
+|5|?|?|?|?|?|?|?|?|?|?|5|
+|6|?|?|?|?|?|?|?|?|?|?|6|
+|7|?|?|?|?|?|?|?|?|?|?|7|
+|8|?|?|?|?|?|?|?|?|?|?|8|
+|9|?|?|?|?|?|?|?|?|?|?|9|
+|-|0|1|2|3|4|5|6|7|8|9|-|
+
+-->
+<div id="targetArea">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">4マスのフィールド</div>
+            <div class="col-xs-8">8マスのフィールド</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">＼</div>
+            <div class="col-xs-1">0</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">2</div>
+            <div class="col-xs-1">3</div>
+            <div class="col-xs-1">4</div>
+            <div class="col-xs-1">5</div>
+            <div class="col-xs-1">6</div>
+            <div class="col-xs-1">7</div>
+            <div class="col-xs-1">8</div>
+            <div class="col-xs-1">9</div>
+            <div class="col-xs-1">／</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">0</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">0</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">1</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">2</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">2</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">3</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">3</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">4</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">4</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">5</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">5</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">6</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">6</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">7</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">7</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">8</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">8</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">9</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">?</div>
+            <div class="col-xs-1">9</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1">／</div>
+            <div class="col-xs-1">0</div>
+            <div class="col-xs-1">1</div>
+            <div class="col-xs-1">2</div>
+            <div class="col-xs-1">3</div>
+            <div class="col-xs-1">4</div>
+            <div class="col-xs-1">5</div>
+            <div class="col-xs-1">6</div>
+            <div class="col-xs-1">7</div>
+            <div class="col-xs-1">8</div>
+            <div class="col-xs-1">9</div>
+            <div class="col-xs-1">＼</div>
+        </div>
+    </div>
+</div>

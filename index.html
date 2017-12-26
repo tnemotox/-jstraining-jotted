@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./node_modules/jotted/jotted.css">
+    <link rel="stylesheet" href="./node_modules/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/underscore/underscore-min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/jotted/jotted.js"></script>
+    <script src="./node_modules/codemirror/lib/codemirror.js"></script>
+    <script src="./node_modules/codemirror/addon/fold/xml-fold.js"></script>
+    <script src="./node_modules/codemirror/addon/edit/closetag.js"></script>
+    <script src="./node_modules/codemirror/addon/edit/closebrackets.js"></script>
+    <script src="./node_modules/codemirror/mode/javascript/javascript.js"></script>
+    <script src="./node_modules/codemirror/mode/css/css.js"></script>
+    <script src="./node_modules/codemirror/mode/xml/xml.js"></script>
+    <script src="./node_modules/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JavaScript Training</h1>
+        <div id="message"></div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a id="prev"><span class="glyphicon glyphicon-menu-left"></span>　前の問題　</a></li>
+                    <li><a id="next"><span class="glyphicon glyphicon-menu-right"></span>　次の問題　</a></li>
+                    <li><a id="list"><span class="glyphicon glyphicon-list"></span>　問題一覧　</a></li>
+                    <li><a id="refresh"><span class="glyphicon glyphicon-refresh"></span>　問題を再読込</a></li>
+                    <li><a id="answer"><span class="glyphicon glyphicon-ok"></span>　解答例を表示</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="navbar navbar-default">
+            <div class="collapse navbar-collapse navbar-title">
+                <div class="navbar-header">
+                    <span class="navbar-brand">問題<span id="idx"></span></span>
+                    <span class="navbar-brand"><span id="desc"></span></span>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse">
+                <div class="navbar-header">
+                    <span class="navbar-brand">ペインの表示</span>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <div class="navbar-text-wrap navbar-text">
+                        <label class="navbar-label">
+                            <input type="checkbox" value="result" name="pane" checked/>
+                            <span>　Result</span>
+                        </label>
+                    </div>
+                    <div class="navbar-text-wrap navbar-text">
+                        <label class="navbar-label">
+                            <input type="checkbox" value="html" name="pane" checked/>
+                            <span>　HTML</span>
+                        </label>
+                    </div>
+                    <div class="navbar-text-wrap navbar-text">
+                        <label class="navbar-label">
+                            <input type="checkbox" value="css" name="pane" checked/>
+                            <span>　CSS</span>
+                        </label>
+                    </div>
+                    <div class="navbar-text-wrap navbar-text">
+                        <label class="navbar-label">
+                            <input type="checkbox" value="js" name="pane" checked/>
+                            <span>　JavaScript</span>
+                        </label>
+                    </div>
+                    <div class="navbar-text-wrap navbar-text">
+                        <label class="navbar-label">
+                            <input type="checkbox" value="console" name="pane" checked/>
+                            <span>　JS Console</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="editor"></div>
+    </div>
+    <div id="list-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                    <h3 class="modal-title">問題を選択してください</h3>
+                </div>
+                <!-- JSONから読み込んだ問題リストを追加する -->
+                <div class="modal-body" id="list-modal-data"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

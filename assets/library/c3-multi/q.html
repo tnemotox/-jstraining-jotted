@@ -1,0 +1,30 @@
+<!-- HTMLを自由に編集してください。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/c3/node_modules/d3/d3.js"></script>
+<script src="./node_modules/c3/c3.js"></script>
+<script src="./node_modules/jquery-mockjax/dist/jquery.mockjax.min.js"></script>
+<script src="./node_modules/underscore/underscore-min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./node_modules/c3/c3.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">c3.jsを利用して、Ajaxで取得したJSONを元に#multi-graph二軸グラフを描画する。</li>
+            <li class="list-group-item">定義済のAjaxのモックに対してアクセスし、JSONを取得すること。</li>
+            <li class="list-group-item">ownTask、otherTaskは、1グループとして積み上げ棒グラフとすること。（<a href="http://c3js.org/samples/chart_bar_stacked.html">サンプル</a>）</li>
+            <li class="list-group-item">completedTaskは棒グラフとすること。</li>
+            <li class="list-group-item">actualTaskは折れ線グラフとすること。</li>
+            <li class="list-group-item"><a href="http://c3js.org/samples/chart_combination.html">複数種類のグラフを使用するサンプル。</a></li>
+            <li class="list-group-item">参考URL：<a href="http://c3js.org/">c3.js</a></li>
+        </ul>
+
+        <button id="check">作成したスクリプトを実行</button>
+    </div>
+</div>
+
+
+<div id="targetArea">
+    <table id="multi-graph"></table>
+</div>

@@ -1,0 +1,29 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">下記のHTMLから、name属性がtargetであるcheckboxをすべて取得する。</li>
+            <li class="list-group-item">取得したチェックボックスから、チェックされている数をコンソールに出力する。</li>
+            <li class="list-group-item">チェックされている要素のvalueをコンソールに出力する。</li>
+            <li class="list-group-item">ヒント：jQueryの繰り返し構文 $.each を使ってみよう。</li>
+            <li class="list-group-item">全てのチェックボックスを非チェック状態にする。</li>
+        </ul>
+        <div id="targetArea">
+            <label><input type="checkbox" name="target" value="apple" checked="true">　りんご</label><br>
+            <label><input type="checkbox" name="target" value="banana">　バナナ</label><br>
+            <label><input type="checkbox" name="target" value="grape" checked="true">　ぶどう</label>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info">オブジェクト内のプロパティを全て参照する場合、$.each（jQueryの繰り返し構文）が便利。</li>
+            <li class="list-group-item list-group-item-info"><a href="http://qiita.com/nantekkotai/items/6c603b40ac2264e9f6f6" target="blank">参考リンク</a>：JavaScriptのforEachでは、簡単には実現できない。</li>
+            <li class="list-group-item list-group-item-info">$.each内でthisを参照すると、valueと同じ値が得られる。</li>
+            <li class="list-group-item list-group-item-info">$.filter()は、セレクタ形式でも記述できる。</li>
+            <li class="list-group-item list-group-item-info">チェックボックスのチェック状態を取得／設定するためには、$.prop()を使用する。</li>
+        </ul>
+        <button id="check">作成したスクリプトを実行</button>
+    </div>
+</div>

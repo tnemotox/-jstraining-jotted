@@ -1,0 +1,28 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">下記のHTMLから、idがtargetであるspan要素の配下のテキストを取得し、ログに出力する。</li>
+            <li class="list-group-item">jQueryのセレクタを使用すること。</li>
+        </ul>
+
+        <!-- 操作対象DOM -->
+        <div id="targetArea">
+            <!-- このspanタグの中の文字列を取得し、コンソールに出力する -->
+            <span id="target">対象文字列</span>
+        </div>
+        <!-- 操作対象DOM ここまで -->
+
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info">idは<strong>'#xxx'</strong>、classは<strong>'.xxx'</strong>、要素は<strong>'span'</strong>のように記述する。</li>
+            <li class="list-group-item list-group-item-info">idと要素を組み合わせる場合は、<strong>'div#id'</strong>のように記述する。</li>
+            <li class="list-group-item list-group-item-info">取得したDOM要素をjQueryオブジェクトとして使用する場合は、$(element)のように記述する。</li>
+            <li class="list-group-item list-group-item-info">タグの中のテキストは、text()で取得する。</li>
+        </ul>
+        <button id="check">作成したスクリプトを実行</button>
+    </div>
+</div>

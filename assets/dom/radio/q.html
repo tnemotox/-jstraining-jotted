@@ -1,0 +1,25 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">下記のHTMLから、name属性がtargetであるradioをすべて取得する。</li>
+            <li class="list-group-item">取得したラジオボタンで選択されている要素のvalueをコンソールに出力する。</li>
+        </ul>
+        
+        <!-- 操作対象DOM -->
+        <div id="targetArea">
+            <!-- 以下のラジオボタンを操作する -->
+            <label><input type="radio" name="target" value="default" checked="true">　未選択</label><br>
+            <label><input type="radio" name="target" value="apple">　りんご</label><br>
+            <label><input type="radio" name="target" value="banana">　バナナ</label><br>
+            <label><input type="radio" name="target" value="grape">　ぶどう</label>
+        </div>
+        <!-- 操作対象DOM ここまで -->
+
+        <button id="check">作成したスクリプトを実行</button>
+    </div>
+</div>

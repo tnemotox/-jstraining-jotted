@@ -1,0 +1,22 @@
+<!-- eonasdan-bootstrap-datetimepicker に必要なライブラリをインポートしてください。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">Bootstrapのプラグイン"datetimepicker"を用いて、日付入力ダイアログを利用する。</li>
+            <li class="list-group-item">HTML中のテキストボックスに、datetimepickerをバインドする。</li>
+            <li class="list-group-item">eonasdan-bootstrap-datetimepickerのjsをインポートする必要がある。cssはインポート済み。</li>
+            <li class="list-group-item">また、datetimpepickerはmoment.jsにも依存しているため、合わせてインポートする必要がある。</li>
+            <li class="list-group-item">インポートする順番に注意！うまく動かなくても、ヒントはコンソールに出力されているはず。</li>
+            <li class="list-group-item">momentjs：[./node_modules/moment/moment.js]</li>
+            <li class="list-group-item">datetimepicker：[./node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js]</li>
+        </ul>
+        <div id="targetArea">
+            <input type="text" id="date" />
+        </div>
+    </div>
+</div>

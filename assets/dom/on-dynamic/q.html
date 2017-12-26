@@ -1,0 +1,32 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">Todoをチェックすると完了数が更新されるが、追加したTodoにはこれが適用されない。</li>
+            <li class="list-group-item">追加したTodoにもイベントがバインドされるよう、処理を修正する。</li>
+            <li class="list-group-item">ヒント：$.onの第二引数を調べてみてください</li>
+        </ul>
+
+        <!-- 対象DOM -->
+        <div id="targetArea">
+            <input type="text" id="todo" />
+            <button id="add">追加</button>
+            <strong>　　完了/合計：<span id="completed">0</span>/<span id="all">7</span></strong>
+            <hr>
+            <ul id="todos">
+                <li><label><input type="checkbox" />　飲み屋を探す</label></li>
+                <li><label><input type="checkbox" />　飲み屋を仮押さえする</label></li>
+                <li><label><input type="checkbox" />　参加人数を確定する</label></li>
+                <li><label><input type="checkbox" />　飲み屋を予約する</label></li>
+                <li><label><input type="checkbox" />　当日の段取りを考える</label></li>
+                <li><label><input type="checkbox" />　主賓に挨拶のお願いをする</label></li>
+                <li><label><input type="checkbox" />　会費を集める</label></li>
+            </ul>
+        </div>
+        <!-- 対象DOM 終わり -->
+    </div>
+</div>

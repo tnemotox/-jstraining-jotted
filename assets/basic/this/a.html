@@ -1,0 +1,20 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">解答例を表示し、動作を確認してみよう。</li>
+            <li class="list-group-item">ソースコードを追いかけて、どのように動作しているかを理解するようにしよう。</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info">Javaとは異なり、JavaScriptでは呼び出し方によってthisの参照先が違うことを意識しておく。</li>
+            <li class="list-group-item list-group-item-info">基本的には、レシーバオブジェクトを指していると考えればよい。</li>
+            <li class="list-group-item list-group-item-info">外部ライブラリで定義された関数では、applyによってthisの参照先が差し替えられていることによって使いやすくなっているものもある。</li>
+            <li class="list-group-item list-group-item-info">例えば、$.each（jQueryの繰り返し）では、ループ中にthisを用いることで現在の要素が取得できる、など。</li>
+        </ul>
+        <button id="check">作成したスクリプトを実行</button>
+    </div>
+</div>

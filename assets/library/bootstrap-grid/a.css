@@ -1,0 +1,12 @@
+/* この問題は、CSSを編集する必要はありません。 */
+
+#targetArea {
+    margin-bottom:10px;
+    margin-top:10px;
+    padding:5px;
+}
+
+.row div {
+    text-align:center;
+    border: 1px solid #999;
+}

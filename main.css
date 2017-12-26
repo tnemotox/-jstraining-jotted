@@ -1,0 +1,252 @@
+/**
+ * bootstrapのcssを上書き
+ */
+
+.navbar .navbar-inner {
+    padding: 0;
+}
+
+.navbar .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+
+.navbar .nav li {
+    display: table-cell;
+    float: none;
+}
+
+.navbar .nav li:hover {
+    background-color: #eee;
+}
+
+.navbar .nav li a {
+    font-weight: bold;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, .75);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.navbar .nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 3px 3px 0;
+}
+.container {
+    width: 90%;
+}
+
+.navbar-text-wrap {
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+
+.navbar-text-wrap.checked {
+    background-color: rgba(220, 247, 149, 0.27);
+}
+
+.navbar-text-wrap:first-child {
+    border-left: 1px solid #ccc;
+}
+
+.navbar-text-wrap:hover {
+    color: #000;
+    background-color: rgba(220, 247, 149, 0.75);
+}
+
+.navbar-label {
+    margin: 0px;
+    padding: 15px 0px;
+    font-weight: normal;
+    width: 100%;
+}
+
+.navbar-title {
+    border-bottom: 1px solid #ccc;
+    background-color: #c2ddc4;
+    font-weight: bold;
+}
+
+/**
+ * jottedのcssを上書き
+ */
+.jotted {
+    height: 60em;
+}
+
+.jotted-nav {
+    display: table;
+    table-layout: fixed;
+    background: rgba(60,60,60,0.08);
+    border-bottom: 1px solid rgba(60,60,60,0.2);
+}
+
+.jotted-nav-item {
+    display: table-cell;
+    float: none;
+    border-left: solid 1px #999 !important;
+    text-align: center;
+}
+
+.jotted-nav-item a:hover, .jotted-nav-item a:focus {
+    text-decoration: none;
+    color: #555;
+}
+
+.jotted-nav-item:first-child {
+    border-left: none;
+}
+
+.jotted-nav-item:hover,
+.jotted-nav-item:focus {
+    background: rgba(20,20,20, 0.2);
+}
+.jotted-nav-item:active {
+    background: rgba(60,60,60,0.12);
+    border:none;
+}
+
+.jotted-nav-item a {
+    text-decoration: none;
+}
+
+.jotted-theme-bin .jotted-pane-result {
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    padding-top: 2.4em;
+    box-sizing: border-box;
+}
+
+.jotted-has-html .jotted-nav-item-html,
+.jotted-has-css .jotted-nav-item-css,
+.jotted-has-js .jotted-nav-item-js,
+.jotted-nav-item-console {
+    display: table-cell;
+}
+
+.jotted-theme-bin.jotted-has-result .jotted-pane-result {
+    position: relative;
+    float: left;
+    visibility: visible;
+}
+
+.jotted-pane-active-result .jotted-nav-item-result,
+.jotted-pane-active-html .jotted-nav-item-html,
+.jotted-pane-active-css .jotted-nav-item-css,
+.jotted-pane-active-js .jotted-nav-item-js {
+    border-color:#fff;
+    border-left: solid 1px #999;
+}
+
+.jotted-pane-active-result .jotted-nav-item-result:first-child,
+.jotted-pane-active-html .jotted-nav-item-html:first-child,
+.jotted-pane-active-css .jotted-nav-item-css:first-child,
+.jotted-pane-active-js .jotted-nav-item-js:first-child {
+    border-color:#fff;
+    border-left: none;
+}
+
+.jotted-console-input {
+    background: rgba(60,60,60,0.12);
+}
+.jotted-console-input:before {
+    line-height: 3.6em;
+}
+.jotted-console-input input {
+    height: 3.6em;
+}
+
+.jotted-theme-bin.jotted-has-html .jotted-nav-item,
+.jotted-theme-bin.jotted-has-css .jotted-nav-item,
+.jotted-theme-bin.jotted-has-js .jotted-nav-item,
+.jotted-theme-bin.jotted-has-console .jotted-nav-item,
+.jotted-theme-bin.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html .jotted-pane,
+.jotted-theme-bin.jotted-has-css .jotted-pane,
+.jotted-theme-bin.jotted-has-js .jotted-pane,
+.jotted-theme-bin.jotted-has-console .jotted-pane,
+.jotted-theme-bin.jotted-has-result .jotted-pane {
+    width: 100%;
+}
+
+.jotted-theme-bin.jotted-has-html.jotted-has-css .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-js .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-console .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-css.jotted-has-js .jotted-nav-item,
+.jotted-theme-bin.jotted-has-css.jotted-has-console .jotted-nav-item,
+.jotted-theme-bin.jotted-has-css.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-js.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-js.jotted-has-console .jotted-nav-item,
+.jotted-theme-bin.jotted-has-console.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-css .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-js .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-console .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-css.jotted-has-js .jotted-pane,
+.jotted-theme-bin.jotted-has-css.jotted-has-console .jotted-pane,
+.jotted-theme-bin.jotted-has-css.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-js.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-js.jotted-has-console .jotted-pane,
+.jotted-theme-bin.jotted-has-result.jotted-has-console .jotted-pane {
+    width: 50%;
+}
+
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-js .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-console .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-js.jotted-has-console .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-js.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-console.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-css.jotted-has-js.jotted-has-console .jotted-nav-item,
+.jotted-theme-bin.jotted-has-css.jotted-has-js.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-css.jotted-has-console.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-console.jotted-has-result.jotted-has-js .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-js .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-console .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-js.jotted-has-console .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-js.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-console.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-css.jotted-has-js.jotted-has-console .jotted-pane,
+.jotted-theme-bin.jotted-has-css.jotted-has-js.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-css.jotted-has-console.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-console.jotted-has-result.jotted-has-js .jotted-pane {
+    width: 33.33%;
+}
+
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-js.jotted-has-console .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-js.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-console.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-js.jotted-has-console.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-css.jotted-has-js.jotted-has-console.jotted-has-result .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-js.jotted-has-console .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-js.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-console.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-html.jotted-has-js.jotted-has-console.jotted-has-result .jotted-pane,
+.jotted-theme-bin.jotted-has-css.jotted-has-js.jotted-has-console.jotted-has-result .jotted-pane {
+    width: 25%;
+}
+
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-js.jotted-has-console .jotted-nav-item,
+.jotted-theme-bin.jotted-has-html.jotted-has-css.jotted-has-js.jotted-has-console .jotted-pane {
+    width: 20%;
+}
+
+/**
+ * その他
+ */
+.table th {
+    text-align:center;
+    background-color: rgba(220, 247, 149, 0.27);
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    vertical-align: middle;
+}

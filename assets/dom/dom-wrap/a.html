@@ -1,0 +1,51 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">HTMLペインのコメントを満たすDOMを作成する。実装は4行で終わる。</li>
+        </ul>
+
+        <!-- 対象のDOM要素 -->
+        <div id="targetArea">
+            <li class="17-1">子要素1</li>
+            <li class="17-1">子要素2</li>
+            <!-- 17-1 子要素をまとめて囲う
+            <ul>
+                <li class="17-1">子要素1</li>
+                <li class="17-1">子要素2</li>
+            </ul>
+            -->
+            <p class="17-2">子要素3</p>
+            <p class="17-2">子要素4</p>
+            <!-- 17-2 子要素をそれぞれ囲う
+            <div><p class="17-2">子要素3</p></div>
+            <div><p class="17-2">子要素4</p></div>
+            -->
+            <p class="17-3">子要素5</p>
+            <p class="17-3">子要素6</p>
+            <!-- 17-3 子要素の中を囲う
+            <p class="17-3"><i>子要素5</i></p>
+            <p class="17-3"><i>子要素6</i></p>
+            -->
+            <div>
+                <p class="17-4">子要素7</p>
+                <p class="17-4">子要素8</p>
+            </div>
+            <!-- 17-4 親要素を削除
+            <p class="17-4">子要素7</p>
+            <p class="17-4">子要素8</p>
+            -->
+        </div>
+        <!-- 対象のDOM要素 ここまで -->
+
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info">関数とその中身を全て暗記する必要はありませんが、何ができるかは頭に入れておくと、無駄な実装をすることが減りますね。</li>
+        </ul>
+
+        <button id="check">作成したスクリプトを実行</button>
+    </div>
+</div>

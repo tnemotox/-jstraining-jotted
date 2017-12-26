@@ -1,0 +1,27 @@
+<!-- この問題は、HTMLを編集する必要はありません。 -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">下記のHTMLから、name属性がtargetであるcheckboxをすべて取得する。</li>
+            <li class="list-group-item">取得したチェックボックスから、チェックされている数をコンソールに出力する。</li>
+            <li class="list-group-item">チェックされている要素のvalueをコンソールに出力する。</li>
+            <li class="list-group-item">ヒント：jQueryの繰り返し構文 $.each を使ってみよう。</li>
+            <li class="list-group-item">全てのチェックボックスを非チェック状態にする。</li>
+        </ul>
+
+        <!-- 操作対象DOM -->
+        <div id="targetArea">
+           <!-- 以下のチェックボックスを操作する -->
+            <label><input type="checkbox" name="target" value="apple" checked="true">　りんご</label><br>
+            <label><input type="checkbox" name="target" value="banana">　バナナ</label><br>
+            <label><input type="checkbox" name="target" value="grape" checked="true">　ぶどう</label>
+        </div>
+        <!-- 操作対象DOM ここまで-->
+
+        <button id="check">作成したスクリプトを実行</button>
+    </div>
+</div>
