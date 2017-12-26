@@ -1,7 +1,7 @@
 # JavaScript Training Powerd by jotted
 
-Web�x�[�X��JavaScript/CSS/HTML�����ꓚ�`���Ŋw�K���邽�߂̊�Ղł��B
-[Jotted](https://ghinda.net/jotted/)�Ƃ���OSS�����ɍ쐬���Ă��܂��B
+インターネットにアクセスできない環境で、WebベースでJavaScript/CSS/HTMLを一問一答形式で学習するための基盤です。  
+[Jotted](https://ghinda.net/jotted/)を元に作成しています。
 
 ## usage
 
@@ -10,10 +10,10 @@ Web�x�[�X��JavaScript/CSS/HTML�����ꓚ�`���Ŋw�K���邽�߂̊�Ղł��B
 
 access:[http://127.0.0.1:3000/](http://127.0.0.1:3000/)
 
-## ����ǉ�����菇
+## 問題を追加する手順
 
-* list.json�ɖ��̖��̂Ɛ������A�g�p����y�C�����`�����I�u�W�F�N�g��ǉ�����
-* assets�z����list.json�ɋL�q�������̂ɍ��킹�ăt�H���_���쐬����
-* �쐬�����t�H���_�z���ɁA����q.js/css/html�A�񓚂�a.js/css/html�Ƃ��Ė���z�u����
-* �s�v�ȃt�@�C���ł����Ă��A��t�@�C���ō쐬���Ă����Ă�������
-* list.json�ɖ��̎�ʂ𑝂₵�����ꍇ�́Amain.js��ҏW����K�v������܂��i�����ł���̂ŕK�v�ł���΂����k���������j
+* list.jsonに問題の名称と説明文、使用するペインを定義したオブジェクトを追加する
+* assets配下にlist.jsonに記述した名称に合わせてフォルダを作成する
+* 作成したフォルダ配下に、問題はq.js/css/html、回答はa.js/css/htmlとして問題を配置する
+* 不要なファイルであっても、空ファイルで作成しておく
+* list.jsonに問題の種別を増やしたい場合は、main.jsを編集する必要する
